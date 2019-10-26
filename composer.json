@@ -1,0 +1,9 @@
+{
+    "name": "evgen/kiss-tools",
+    "autoload": {
+        "psr-4": {
+            "KissTools\\": "src/"
+        }
+    },
+    "require": {}
+}
