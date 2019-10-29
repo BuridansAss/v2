@@ -4,7 +4,7 @@
 namespace KissTools\Notifications;
 
 
-use KissTools\Notifications\Formatter\Formatter;
+use KissTools\Engine\Notifications\Formatter\Formatter;
 
 class ConsolePrinter
 {
