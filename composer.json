@@ -6,6 +6,7 @@
         }
     },
     "require": {
-      "ext-imagick": "*"
+      "ext-imagick": "*",
+        "ext-readline": "*"
     }
 }

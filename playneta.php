@@ -3,7 +3,7 @@
 include 'vendor/autoload.php';
 
 
-use KissTools\Notifications\ConsolePrinter;
+use KissTools\Engine\Notifications\ConsolePrinter;
 use KissTools\SplitArgs;
 
 
@@ -18,42 +18,34 @@ function init() : void {
 
     ConsolePrinter::staticNeutralMessage('Создание проекта:');
 
-    ConsolePrinter::staticInfoMessage('Введите новый путь, где развернется tool проект, (путь должен быть полным)');
-    $rootAppPath = fgets(STDIN);
-    createApp($rootAppPath);
+    ConsolePrinter::staticInfoMessage( 'Введите новый путь,');
+    ConsolePrinter::staticInfoMessage('где развернется tool проект,');
+    ConsolePrinter::staticInfoMessage('(путь должен быть полным).');
+    ConsolePrinter::staticInfoMessage('Не ставь в конце разделитель а то пожрешь говна!!!');
+    ConsolePrinter::staticInfoMessage('Не делай это на Винде. а то пожрешь говна!!!');
+
+    $pathToApp = readline();
+    $name = createApp($pathToApp);
 
     ConsolePrinter::staticSeparator();
+    ConsolePrinter::staticGoodMessage('Создается проект ' . $name);
 
-    $line = fgets(STDIN);
-    echo $line;
+    createProjectStructure($name);
+
+    ConsolePrinter::staticSeparator();
 }
 
+function createApp($appPath) : string {
+    $projectName = $appPath . '/KissTools';
 
-function createApp($appPath) : void {
-    if (is_dir($appPath)) {
-        ConsolePrinter::staticInfoMessage('Такая папка уже существует, размещаем в ней?');
-
-        $answer = fgets(STDIN);
-
-        while (!isYseAnswer($answer)) {
-            ConsolePrinter::staticInfoMessage('Введите другой путь');
-
-            $appPath = fgets(STDIN);
-
-            if (is_dir($appPath)) {
-                ConsolePrinter::staticInfoMessage('Такая папка уже существует, размещаем в ней?');
-
-                $answer = fgets(STDIN);
-
-                if (!isYseAnswer($answer)) {
-                    continue;
-                }
-            }
-
-        }
-
-        createProjectStructure();
+    if (is_dir($projectName)) {
+        $projectName = $projectName . 'v2';
+        mkdir($projectName, 0777, true);
+    } else {
+        mkdir($projectName, 0777, true);
     }
+
+    return $projectName;
 }
 
 function isYseAnswer($string) : bool {
@@ -67,6 +59,25 @@ function isYseAnswer($string) : bool {
 
 }
 
-function createProjectStructure() {
-    ConsolePrinter::staticGoodMessage('CreatingProject');
+function createProjectStructure($name) {
+    mkdir($name . '/static/game/assets/hats/animated/images', 0777, true);
+    ConsolePrinter::staticGoodMessage('Cоздал: ' . $name . '/static/game/assets/hats/animated/images');
+
+    mkdir($name . '/static/game/images/collection' ,0777, true);
+    ConsolePrinter::staticGoodMessage('Cоздал: ' . $name . '/static/game/images/collection');
+
+    mkdir($name . '/static/game/images/gifts' ,0777, true);
+    ConsolePrinter::staticGoodMessage('Cоздал: ' . $name . '/static/game/images/gifts');
+
+    mkdir($name . '/static/game/images/gifts/en_US/small' ,0777, true);
+    ConsolePrinter::staticGoodMessage('Cоздал: ' . $name . '/static/game/images/gifts/en_US/small');
+
+    mkdir($name . '/static/game/images/gifts/en_US/large' ,0777, true);
+    ConsolePrinter::staticGoodMessage('Cоздал: ' . $name . '/static/game/images/gifts/en_US/large');
+
+    mkdir($name . '/static/game/images/gifts/large' ,0777, true);
+    ConsolePrinter::staticGoodMessage('Cоздал: ' . $name . '/static/game/images/gifts/large');
+
+    mkdir($name . '/static/game/images/gifts/small' ,0777, true);
+    ConsolePrinter::staticGoodMessage('Cоздал: ' . $name . '/static/game/assets/hats/animated/images/');
 }
