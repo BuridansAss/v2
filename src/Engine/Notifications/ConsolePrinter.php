@@ -1,7 +1,7 @@
 <?php
 
 
-namespace KissTools\Notifications;
+namespace KissTools\Engine\Notifications;
 
 
 use KissTools\Engine\Notifications\Formatter\Formatter;

@@ -4,7 +4,7 @@
 namespace KissTools;
 
 
-use KissTools\Notifications\ConsolePrinter;
+use KissTools\Engine\Notifications\ConsolePrinter;
 
 class SplitArgs
 {
