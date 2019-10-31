@@ -2,11 +2,15 @@
     "name": "evgen/kiss-tools",
     "autoload": {
         "psr-4": {
-            "KissTools\\": "src/"
+            "KissTools\\": "src/",
+            "KissTests\\": "tests/"
         }
     },
     "require": {
       "ext-imagick": "*",
         "ext-readline": "*"
+    },
+    "require-dev": {
+        "codeception/codeception": "^3.1"
     }
 }
