@@ -4,6 +4,8 @@
 namespace KissTools\Engine\Images\Picture;
 
 
+use KissTools\Engine\Images\Picture;
+
 class Transformed extends Picture
 {
     /**
@@ -20,7 +22,7 @@ class Transformed extends Picture
      * @param Original $original
      * @return Transformed
      */
-    public static function copy(Original $original) : Transformed
+    public static function copy(Original $original) : Picture
     {
         $self = new static($original->getSrcPath());
 
@@ -47,7 +49,7 @@ class Transformed extends Picture
      */
     public function setHeight($height) : Transformed
     {
-        $this->width = $height;
+        $this->height = $height;
 
         return $this;
     }

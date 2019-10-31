@@ -1,12 +1,12 @@
 <?php
 
 
-namespace KissTools\Engine\Images\Picture;
+namespace KissTools\Engine\Images;
 
 
 use Imagick;
 use ImagickException;
-use KissTools\Notifications\ConsolePrinter;
+use KissTools\Engine\Notifications\ConsolePrinter;
 
  abstract class Picture
 {

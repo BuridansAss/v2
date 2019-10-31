@@ -6,7 +6,6 @@ namespace KissTools\Engine\Images;
 
 use Imagick;
 use ImagickPixel;
-use KissTools\Engine\Images\Picture\Picture;
 
 class Canvas
 {
