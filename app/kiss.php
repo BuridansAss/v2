@@ -1,6 +1,11 @@
 <?php
 
+use App\Bots\Learning\Text\Handlers\CsvMessageParser;
+use KissTools\Engine\Text\Descriptors\ReadDescriptor;
+
 require '../vendor/autoload.php';
+
+
 //441 475
 //861 895
 
@@ -21,6 +26,11 @@ require '../vendor/autoload.php';
 //    $i++;
 //}
 
-$background = '/home/evgen/Prjs/kiss-tools/app/background/';
+//$background = '/home/evgen/Prjs/kiss-tools/app/background/';
+//
+//\KissTools\Engine\Images\Asshole\TMP\MobileConverter::create('/home/evgen/Prjs/kiss-tools/app/popup.png', $background);
 
-\KissTools\Engine\Images\Asshole\TMP\MobileConverter::create('/home/evgen/Prjs/kiss-tools/app/popup.png', $background);
+
+$cr = new CsvMessageParser();
+$desc = ReadDescriptor::create('/home/evgen/Загрузки/Messenger Test.csv');
+$cr->handle($desc);
