@@ -16,9 +16,9 @@
  *
  * @SuppressWarnings(PHPMD)
 */
-class FunctionalTester extends \Codeception\Actor
+class KisskissTester extends \Codeception\Actor
 {
-    use _generated\FunctionalTesterActions;
+    use _generated\KisskissTesterActions;
 
    /**
     * Define custom actions here

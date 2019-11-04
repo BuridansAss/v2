@@ -1,0 +1,7 @@
+actor: KisskissTester
+modules:
+  enabled:
+    - PhpBrowser:
+        url: http://getkisskiss.com
+    - \Helper\Kisskiss
+  step_decorators: ~
