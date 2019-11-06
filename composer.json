@@ -9,7 +9,9 @@
     },
     "require": {
       "ext-imagick": "*",
-        "ext-readline": "*"
+        "ext-readline": "*",
+      "ext-curl": "*",
+        "ext-json": "*"
     },
     "require-dev": {
         "codeception/codeception": "^3.1"

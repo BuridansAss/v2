@@ -16,12 +16,8 @@ class WriteDescriptor extends AbstractDescriptor
      */
     public static function create($path) : AbstractDescriptor
     {
-        if (file_exists($path)) {
-            ConsolePrinter::exceptionExitFromApp($path . ' такой файл существует');
-        }
-
         $descriptor =  new static($path);
-        $descriptor->handler = fopen($path, 'w');
+        $descriptor->handler = fopen($path, 'a');
         return  $descriptor;
     }
 }

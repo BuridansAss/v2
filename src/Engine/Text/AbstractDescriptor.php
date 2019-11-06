@@ -40,4 +40,12 @@ abstract class AbstractDescriptor
     {
         fclose($this->handler);
     }
+
+    /**
+     * @return string
+     */
+    public function getPath() : string
+    {
+        return $this->path;
+    }
 }

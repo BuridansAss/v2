@@ -31,6 +31,14 @@ require '../vendor/autoload.php';
 //\KissTools\Engine\Images\Asshole\TMP\MobileConverter::create('/home/evgen/Prjs/kiss-tools/app/popup.png', $background);
 
 
-$cr = new CsvMessageParser();
-$desc = ReadDescriptor::create('/home/evgen/Загрузки/Messenger Test.csv');
-$cr->handle($desc);
+//$cr = new CsvMessageParser();
+//$desc = ReadDescriptor::create('/home/evgen/Загрузки/Messenger Test.csv');
+//$cr->handle($desc);
+//
+//$cw = new \App\Bots\Learning\Text\Handlers\CsvBaseCreator();
+//$wdesc = \KissTools\Engine\Text\Descriptors\WriteDescriptor::create('/home/evgen/Загрузки/Test.csv');
+//$cw->setLine(['hui', 'pizda']);
+//$cw->handle($wdesc);
+//$wdesc->close();
+
+(new \App\Bots\Learning\CsvBusByMentorWardDialog('/home/evgen/Загрузки/botMessages'))->read();
