@@ -125,6 +125,15 @@ function createProjectStructure($name) {
     mkdir($name . '/source/sets' ,0777, true);
     ConsolePrinter::staticGoodMessage('Cоздал: ' . $name . '/source/sets');
 
+    mkdir($name . '/source/sets/frames' ,0777, true);
+    ConsolePrinter::staticGoodMessage('Cоздал: ' . $name . '/source/sets/frames');
+
+    mkdir($name . '/source/sets/hats' ,0777, true);
+    ConsolePrinter::staticGoodMessage('Cоздал: ' . $name . '/source/sets/hats');
+
+    mkdir($name . '/source/sets/icons' ,0777, true);
+    ConsolePrinter::staticGoodMessage('Cоздал: ' . $name . '/source/sets/icons');
+
     mkdir($name . '/source/stickers' ,0777, true);
     ConsolePrinter::staticGoodMessage('Cоздал: ' . $name . '/source/stickers');
 }
