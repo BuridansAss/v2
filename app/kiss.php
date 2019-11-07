@@ -41,4 +41,6 @@ require '../vendor/autoload.php';
 //$cw->handle($wdesc);
 //$wdesc->close();
 
-(new \App\Bots\Learning\CsvBusByMentorWardDialog('/home/evgen/Загрузки/botMessages'))->read();
+//(new \App\Bots\Learning\CsvBusByMentorWardDialog('/home/evgen/Загрузки/botMessages'))->read();
+
+echo \KissTools\Engine\Utils\File::getExtension('jjg.jjgg');

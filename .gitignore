@@ -1,3 +1,4 @@
 vendor/
 .idea/
 chat_*:bot*.txt
+kiss.config.php
