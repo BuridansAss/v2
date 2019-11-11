@@ -1,9 +1,13 @@
 <?php
 
+require '../vendor/autoload.php';
+
 use App\Bots\Learning\Text\Handlers\CsvMessageParser;
 use KissTools\Engine\Text\Descriptors\ReadDescriptor;
 
-require '../vendor/autoload.php';
+$bootstrap = require 'bootstrap.config.php';
+
+
 
 
 //441 475
@@ -43,4 +47,3 @@ require '../vendor/autoload.php';
 
 //(new \App\Bots\Learning\CsvBusByMentorWardDialog('/home/evgen/Загрузки/botMessages'))->read();
 
-echo \KissTools\Engine\Utils\File::getExtension('jjg.jjgg');
