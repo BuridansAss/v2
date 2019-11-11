@@ -53,6 +53,9 @@ abstract class CsvReadV2 implements Reader, Iventable
      */
     abstract function parse($string);
 
+    /**
+     * @param $args
+     */
     public function occurred($args): void
     {
         if ($this->observer !== null) {
