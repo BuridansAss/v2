@@ -139,7 +139,6 @@ function createProjectStructure($name) {
 }
 
 function createConfig($args) {
-
     $file = '<?php' . PHP_EOL . 'return [' . PHP_EOL;
 
     foreach ($args as $key => $arg) {

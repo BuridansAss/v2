@@ -47,3 +47,7 @@ $bootstrap = require 'bootstrap.config.php';
 
 //(new \App\Bots\Learning\CsvBusByMentorWardDialog('/home/evgen/Загрузки/botMessages'))->read();
 
+$app = \KissTools\Application::start();
+$app->setCliArgs($argv);
+
+
